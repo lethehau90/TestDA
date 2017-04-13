@@ -1,0 +1,4 @@
+E:\WEB MVC\DoAn\DoAn.Common\bin\Debug\DoAn.Common.dll
+E:\WEB MVC\DoAn\DoAn.Common\bin\Debug\DoAn.Common.pdb
+E:\WEB MVC\DoAn\DoAn.Common\obj\Debug\DoAn.Common.dll
+E:\WEB MVC\DoAn\DoAn.Common\obj\Debug\DoAn.Common.pdb

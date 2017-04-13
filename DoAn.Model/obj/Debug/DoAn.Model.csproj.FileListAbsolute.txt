@@ -1,0 +1,16 @@
+E:\WEB MVC\DoAn\DoAn.Model\bin\Debug\DoAn.Model.dll.config
+E:\WEB MVC\DoAn\DoAn.Model\bin\Debug\DoAn.Model.dll
+E:\WEB MVC\DoAn\DoAn.Model\bin\Debug\DoAn.Model.pdb
+E:\WEB MVC\DoAn\DoAn.Model\bin\Debug\DoAn.Common.dll
+E:\WEB MVC\DoAn\DoAn.Model\bin\Debug\EntityFramework.dll
+E:\WEB MVC\DoAn\DoAn.Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\WEB MVC\DoAn\DoAn.Model\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\WEB MVC\DoAn\DoAn.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\WEB MVC\DoAn\DoAn.Model\bin\Debug\DoAn.Common.pdb
+E:\WEB MVC\DoAn\DoAn.Model\bin\Debug\EntityFramework.xml
+E:\WEB MVC\DoAn\DoAn.Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\WEB MVC\DoAn\DoAn.Model\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+E:\WEB MVC\DoAn\DoAn.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\WEB MVC\DoAn\DoAn.Model\obj\Debug\DoAn.Model.csprojResolveAssemblyReference.cache
+E:\WEB MVC\DoAn\DoAn.Model\obj\Debug\DoAn.Model.dll
+E:\WEB MVC\DoAn\DoAn.Model\obj\Debug\DoAn.Model.pdb
