@@ -26,9 +26,9 @@ namespace DoAn.Service
         private IDonationRepository _donationRepository;
         private IUnitOfWork _unitOfWork;
 
-        public DonationService(IDonationRepository controPanelRepository, IUnitOfWork unitOfWork)
+        public DonationService(IDonationRepository donationRepository, IUnitOfWork unitOfWork)
         {
-            this._donationRepository = controPanelRepository;
+            this._donationRepository = donationRepository;
             this._unitOfWork = unitOfWork;
         }
         public Donation Add(Donation donation)

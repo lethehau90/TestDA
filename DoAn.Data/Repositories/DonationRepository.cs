@@ -12,7 +12,7 @@ namespace DoAn.Data.Repositories
     {
 
     }
-    public class DonationRepository : RepositoryBase<Donation>
+    public class DonationRepository : RepositoryBase<Donation>, IDonationRepository
     {
         public DonationRepository(DbFactory dbFactory) : base(dbFactory)
         {
