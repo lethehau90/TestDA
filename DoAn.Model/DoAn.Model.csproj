@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\Auditable.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\Donation.cs" />
     <Compile Include="Models\CustomImage.cs" />

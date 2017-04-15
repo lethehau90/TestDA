@@ -15,7 +15,7 @@ using System.Web.Script.Serialization;
 namespace DoAn.Web.Api
 {
     [RoutePrefix("api/controlpanel")]
-    //[Authorize]
+    [Authorize]
     public class ControlPanelController : ApiControllerBase
     {
         private IControlPanelService _controlPanelService;

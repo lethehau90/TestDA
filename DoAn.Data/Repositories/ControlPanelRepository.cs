@@ -14,7 +14,7 @@ namespace DoAn.Data.Repositories
     }
     public class ControlPanelRepository : RepositoryBase<ControlPanel>, IControPanelRepository
     {
-        public ControlPanelRepository(DbFactory dbFactory) : base(dbFactory)
+        public ControlPanelRepository(IDbFactory dbFactory) : base(dbFactory)
         {
 
         }

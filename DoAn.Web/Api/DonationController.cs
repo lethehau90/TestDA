@@ -27,15 +27,29 @@ namespace DoAn.Web.Api
 
         [Route("getall")]
         [HttpGet]
-        public HttpResponseMessage GetAll(HttpRequestMessage request)
+        public HttpResponseMessage GetAll(HttpRequestMessage request, string keyword, int page, int pageSize = 20)
         {
             return CreateHttpResponse(request, () =>
             {
-                var model = _donationService.GetAll();
+                int totalRow = 0;
 
-                var responseData = Mapper.Map<List<DonationViewModel>>(model.ToList());
+                var model = _donationService.GetAll(keyword);
 
-                var response = request.CreateResponse(HttpStatusCode.OK, responseData);
+                totalRow = model.Count();
+
+                var query = model.OrderByDescending(x => x.CreatedDate).Skip(page * pageSize).Take(pageSize);
+
+                var responseData = Mapper.Map<List<DonationViewModel>>(query.ToList());
+
+                var paginationSet = new PaginationSet<DonationViewModel>()
+                {
+                    Items = responseData,
+                    Page = page,
+                    TotalCount = totalRow,
+                    TotalPages = (int)Math.Ceiling((decimal)totalRow / pageSize)
+                };
+
+                var response = request.CreateResponse(HttpStatusCode.OK, paginationSet);
                 return response;
             });
         }

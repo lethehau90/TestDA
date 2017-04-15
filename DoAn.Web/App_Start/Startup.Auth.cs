@@ -75,9 +75,10 @@ namespace DoAn.Web.App_Start
                 {
                     user = await userManager.FindAsync(context.UserName, context.Password);
                 }
-                catch
+                catch (Exception ex)
                 {
                     // Could not retrieve the user due to error.
+                    var error = ex.Message;
                     context.SetError("server_error");
                     context.Rejected();
                     return;

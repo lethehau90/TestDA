@@ -6,7 +6,7 @@ namespace DoAn.Web.Infrastructure.Extensions
     public static class EntityExtensions
     {
         //UpdateControlPanel
-        public static void UpdateControlPanel(this ControlPanel controlPanel,  ControlPanelViewModel controlPanelViewModel)
+        public static void UpdateControlPanel(this ControlPanel controlPanel, ControlPanelViewModel controlPanelViewModel)
         {
             controlPanel.ID = controlPanelViewModel.ID;
             controlPanel.Name = controlPanelViewModel.Name;
@@ -22,6 +22,29 @@ namespace DoAn.Web.Infrastructure.Extensions
             donation.Price = donationViewModel.Price;
             donation.Class = donationViewModel.Class;
             donation.Address = donationViewModel.Address;
+
+            donation.CreatedDate = donationViewModel.CreatedDate;
+            donation.UpdateDate = donationViewModel.UpdateDate;
+            donation.CreatedBy = donationViewModel.CreatedBy;
+            donation.UpdateBy = donationViewModel.UpdateBy;
+            donation.Status = donationViewModel.Status;
+        }
+
+        //UpdateLaudatory
+        public static void UpdateLaudatory(this Laudatory laudatory, LaudatoryViewModel laudatoryViewModel)
+        {
+            laudatory.ID = laudatoryViewModel.ID;
+            laudatory.Name = laudatoryViewModel.Name;
+            laudatory.Class = laudatoryViewModel.Class;
+            laudatory.Note = laudatoryViewModel.Note;
+            laudatory.Appellation = laudatoryViewModel.Appellation;
+            laudatory.CountBook = laudatoryViewModel.CountBook;
+
+            laudatory.CreatedDate = laudatoryViewModel.CreatedDate;
+            laudatory.UpdateDate = laudatoryViewModel.UpdateDate;
+            laudatory.CreatedBy = laudatoryViewModel.CreatedBy;
+            laudatory.UpdateBy = laudatoryViewModel.UpdateBy;
+            laudatory.Status = laudatoryViewModel.Status;
         }
     }
 }

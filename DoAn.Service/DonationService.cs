@@ -17,7 +17,7 @@ namespace DoAn.Service
         Donation Delete(int id);
 
         Donation GetById(int id);
-        IEnumerable<Donation> GetAll();
+        IEnumerable<Donation> GetAll(string keyword);
 
         void Save();
     }
@@ -41,9 +41,16 @@ namespace DoAn.Service
             return _donationRepository.Delete(id);
         }
 
-        public IEnumerable<Donation> GetAll()
+        public IEnumerable<Donation> GetAll(string keyword)
         {
-            return _donationRepository.GetAll();
+            if (string.IsNullOrEmpty(keyword))
+            {
+                return _donationRepository.GetAll();
+            }
+            else
+            {
+                return _donationRepository.GetMulti(x => x.Name.Contains(keyword));
+            }
         }
 
         public Donation GetById(int id)

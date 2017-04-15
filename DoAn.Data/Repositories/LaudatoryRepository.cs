@@ -14,7 +14,7 @@ namespace DoAn.Data.Repositories
     }
     public class LaudatoryRepository : RepositoryBase<Laudatory>, ILaudatoryRepository
     {
-        public LaudatoryRepository(DbFactory dbFactory) : base(dbFactory)
+        public LaudatoryRepository(IDbFactory dbFactory) : base(dbFactory)
         {
 
         }

@@ -14,7 +14,7 @@ namespace DoAn.Data.Repositories
     }
     public class CumtomImageRepository : RepositoryBase<CustomImage>, ICumtomImageRepository
     {
-        public CumtomImageRepository(DbFactory dbFactory) : base(dbFactory)
+        public CumtomImageRepository(IDbFactory dbFactory) : base(dbFactory)
         {
 
         }

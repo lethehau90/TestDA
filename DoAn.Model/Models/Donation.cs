@@ -5,11 +5,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DoAn.Model.Abstract;
 
 namespace DoAn.Model.Models
 {
     [Table("Donations")]
-    public class Donation
+    public class Donation  : Auditable
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
