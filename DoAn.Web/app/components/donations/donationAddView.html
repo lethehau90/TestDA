@@ -55,7 +55,7 @@
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Ghi chú</label>
                     <div class="col-sm-10">
-                        <textarea class="form-control" name="note" ckeditor="ckeditorOptions" ng-model="product.Note"> </textarea>
+                        <textarea class="form-control" name="note" ng-model="donation.Note"> </textarea>
                         <span ng-show="frmAdddonation.note.$invalid" class="has-error">Phải nhập địa chỉ</span>
                         <span ng-show="frmAdddonation.note.$error.maxlength" class="has-error">lớp chỉ được 250 ký tự</span>
                     </div>
@@ -71,7 +71,7 @@
                 </div>
             </div><!-- /.box-body -->
             <div class="box-footer">
-                <button ui-sref="donations" class="btn btn-default">Cancel</button>
+                <button ui-sref="donation" class="btn btn-default">Cancel</button>
                 <button type="submit" ng-disabled="frmAdddonation.$invalid" class="btn btn-success pull-right">Lưu</button>
             </div><!-- /.box-footer -->
         </form>

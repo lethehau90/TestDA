@@ -3,6 +3,7 @@
 (function () {
     angular.module('doan', ['doan.controlPanels',
                             'doan.donations',
+                            'doan.laudatories',
                             'doan.common'])
         .config(config)
         .config(configAuthentication);

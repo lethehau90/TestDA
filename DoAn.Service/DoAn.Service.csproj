@@ -52,6 +52,7 @@
     <Compile Include="ControlPanelService.cs" />
     <Compile Include="DonationService.cs" />
     <Compile Include="ErrorService.cs" />
+    <Compile Include="LaudatoryService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

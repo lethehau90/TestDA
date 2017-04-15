@@ -1,10 +1,79 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-	<meta charset="utf-8" />
-</head>
-<body>
-
-</body>
-</html>
+﻿ <!-- Content Header (donation header) -->
+<section class="content-header">
+    <h1>
+        Cập nhật quyên góp
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> quyên góp chủ</a></li>
+        <li><a href="#">quyên góp</a></li>
+        <li><a ui-sref="donations">quyên góp</a></li>
+        <li class="active">Cập nhật</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <!-- Default box -->
+    <!-- Horizontal Form -->
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Thêm mới</h3>
+        </div><!-- /.box-header -->
+        <!-- form start -->
+        <form class="form-horizontal" novalidate name="frmEditdonation" role="form" ng-submit="Editdonation()">
+            <div class="box-body">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Tên quyên góp</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" ng-maxlength="250" required name="name" ng-model="donation.Name">
+                        <span ng-show="frmEditdonation.name.$invalid" class="has-error">Phải nhập tên quyên góp</span>
+                        <span ng-show="frmEditdonation.name.$error.maxlength" class="has-error">Tên quyên góp chỉ được 250 ký tự</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Lớp</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" ng-maxlength="250" required name="class" ng-model="donation.Class">
+                        <span ng-show="frmEditdonation.class.$invalid" class="has-error">Phải nhập lớp</span>
+                        <span ng-show="frmEditdonation.class.$error.maxlength" class="has-error">lớp chỉ được 250 ký tự</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Tiền quyên góp</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" required name="price" ng-model="donation.Price">
+                        <span ng-show="frmEditdonation.price.$invalid" class="has-error">Phải nhập lớp</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Địa chỉ</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" ng-maxlength="250" required name="address" ng-model="donation.Address">
+                        <span ng-show="frmEditdonation.address.$invalid" class="has-error">Phải nhập địa chỉ</span>
+                        <span ng-show="frmEditdonation.address.$error.maxlength" class="has-error">lớp chỉ được 250 ký tự</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Ghi chú</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" name="note" ckeditor="ckeditorOptions" ng-model="donation.Note"> </textarea>
+                        <span ng-show="frmEditdonation.note.$invalid" class="has-error">Phải nhập địa chỉ</span>
+                        <span ng-show="frmEditdonation.note.$error.maxlength" class="has-error">lớp chỉ được 250 ký tự</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="status" ng-model="donation.Status" ng-checked="donation.Status" />Kích hoạt
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.box-body -->
+            <div class="box-footer">
+                <button ui-sref="donation" class="btn btn-default">Cancel</button>
+                <button type="submit" ng-disabled="frmEditdonation.$invalid" class="btn btn-success pull-right">Lưu</button>
+            </div><!-- /.box-footer -->
+        </form>
+    </div><!-- /.box -->
+</section><!-- /.content -->

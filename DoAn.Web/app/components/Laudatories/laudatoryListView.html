@@ -1,12 +1,12 @@
 ﻿<!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        Quyên góp
+        Khen thưởng
         <small>Thông tin bảng điều khiển</small>
     </h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
-        <li><a class="active">Quyên góp</a></li>
+        <li><a class="active">Khen thưởng</a></li>
     </ol>
 </section>
 <!-- Main content -->
@@ -14,7 +14,7 @@
     <!-- Default box -->
     <div class="box">
         <div class="box-header with-border">
-            <h3 class="box-title">Quyên góp</h3>
+            <h3 class="box-title">Khen thưởng</h3>
             <div class="box-tools pull-right">
                 <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
                 <button class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
@@ -33,7 +33,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <a class="btn btn-success" ui-sref="donationadd">Thêm mới</a>
+                        <a class="btn btn-success" ui-sref="laudatoryadd">Thêm mới</a>
                         <button class="btn btn-danger" ng-click="deleteMultiple()" id="btnDelete" disabled>Xóa</button>
                     </div>
                 </div>
@@ -46,17 +46,17 @@
                             <th style="width: 5%">ID</th>
                             <th style="width: 20%">Tên</th>
                             <th style="width: 10%">Lớp</th>
-                            <th style="width: 15%">Số tiền</th>
+                            <th style="width: 15%">Danh hiệu</th>
                             <th style="width: 20%">Ngày tạo</th>
                             <th style="width: 20%">Trạng thái</th>
                             <th style="width: 10%">Thao tác</th>
                         </tr>
-                        <tr ng-repeat="item in donations">
+                        <tr ng-repeat="item in laudatories">
                             <td><input type="checkbox" ng-model="item.checked" name="all" /></td>
                             <td>{{item.ID}}</td>
                             <td>{{item.Name}}</td>
                             <td>{{item.Class}}</td>
-                            <td>{{item.Price | currency:" vnđ ":0  }}</td>
+                            <td>{{item.Appellation }}</td>
                             <td>{{item.CreatedDate | date: 'dd/MM/yyyy hh:mm:ss'}}</td>
                             <td>
                                 <span ng-class="{'badge bg-red': item.Status==false, 'badge bg-green': item.Status == true}">
@@ -64,8 +64,8 @@
                                 </span>
                             </td>
                             <td>
-                                <a class="btn btn-sm btn-primary" ui-sref="donationedit({id:item.ID})"><i class="fa fa-pencil"></i></a>
-                                <a class="btn btn-sm btn-danger" ng-click="deleteDonation(item.ID)"><i class="fa fa-trash-o"></i></a>
+                                <a class="btn btn-sm btn-primary" ui-sref="laudatoryedit({id:item.ID})"><i class="fa fa-pencil"></i></a>
+                                <a class="btn btn-sm btn-danger" ng-click="deleteLaudatories(item.ID)"><i class="fa fa-trash-o"></i></a>
                             </td>
                         </tr>
                         <tfoot>
@@ -84,7 +84,7 @@
     </div><!-- /.box --><!-- /.box-body -->
     <!-- /.box-footer-->
     <div class="box-footer" ng-hide="pagesCount == 1 || pagesCount == 0">
-        <pager-directive page="{{page}}" custom-path="{{customPath}}" pages-count="{{pagesCount}}" total-count="{{totalCount}}" search-func="getDonations(page)"></pager-directive>
+        <pager-directive page="{{page}}" custom-path="{{customPath}}" pages-count="{{pagesCount}}" total-count="{{totalCount}}" search-func="getLaudatories(page)"></pager-directive>
     </div>
     <!-- /.box -->
 </section><!-- /.content -->

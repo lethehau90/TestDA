@@ -2,15 +2,15 @@
 
 (function (app) {
 
-    app.controller('donationListController', donationListController);
+    app.controller('laudatoryListController', laudatoryListController);
 
-    donationListController.$inject = ['$scope', '$state', 'notificationService', 'apiService', '$filter', '$ngBootbox']
+    laudatoryListController.$inject = ['$scope', '$state', 'notificationService', 'apiService', '$filter', '$ngBootbox']
 
-    function donationListController($scope, $state, notificationService, apiService, $filter, $ngBootbox) {
+    function laudatoryListController($scope, $state, notificationService, apiService, $filter, $ngBootbox) {
 
-        $scope.donations = [];
+        $scope.laudatories = [];
 
-        $scope.getDonations = getDonations;
+        $scope.getlaudatories = getlaudatories;
 
         $scope.page = 0;
         $scope.pageCount = 0;
@@ -18,13 +18,13 @@
 
         $scope.search = search;
 
-        $scope.deleteDonation = deleteDonation
+        $scope.deletelaudatory = deletelaudatory
 
         $scope.selectAll = selectAll;
 
         $scope.deleteMultiple = deleteMultiple;
 
-        
+
 
         //deleteMultiple
         function deleteMultiple() {
@@ -38,7 +38,7 @@
                         listId: JSON.stringify(listId)
                     }
                 }
-                apiService.del('/api/donation/deletemulti', config, function (result) {
+                apiService.del('/api/laudatory/deletemulti', config, function (result) {
                     notificationService.displaySuccess('Xóa thành công ' + result.data + ' bản ghi')
                     search()
                 }, function (error) {
@@ -50,12 +50,12 @@
         //selectAll
         function selectAll() {
             if ($scope.isAll === false) {
-                angular.forEach($scope.donations, function (item) {
+                angular.forEach($scope.laudatories, function (item) {
                     item.checked = true;
                 });
                 $scope.isAll = true;
             } else {
-                angular.forEach($scope.donations, function (item) {
+                angular.forEach($scope.laudatories, function (item) {
                     item.checked = false;
                 });
                 $scope.isAll = false;
@@ -65,7 +65,7 @@
         $scope.isAll = false;
 
         //listening use watch
-        $scope.$watch("donations", function (n, o) {
+        $scope.$watch("laudatories", function (n, o) {
             var checked = $filter("filter")(n, { checked: true });
             if (checked.length) {
                 $scope.selected = checked;
@@ -76,14 +76,14 @@
         }, true);
 
         //deleteProductCategory
-        function deleteDonation(id) {
+        function deletelaudatory(id) {
             $ngBootbox.confirm('Bạn có chắc chắn muốn xóa?').then(function () {
                 var config = {
                     params: {
                         id: id
                     }
                 }
-                apiService.del('/api/donation/delete', config, function () {
+                apiService.del('/api/laudatory/delete', config, function () {
                     notificationService.displaySuccess('Xóa thành công')
                     search()
                 }, function () {
@@ -94,10 +94,10 @@
 
         //search
         function search() {
-            getDonations();
+            getlaudatories();
         }
 
-        function getDonations(page) {
+        function getlaudatories(page) {
             var config = {
                 params: {
                     keyword: $scope.keyword,
@@ -105,11 +105,11 @@
                     pagesize: 12
                 }
             }
-            apiService.get('/api/donation/getall', config, function (result) {
+            apiService.get('/api/laudatory/getall', config, function (result) {
                 if (result.data.TotalCount === 0) {
                     notificationService.displayWarning('Không có bản ghi nào')
                 }
-                $scope.donations = result.data.Items;
+                $scope.laudatories = result.data.Items;
                 $scope.page = result.data.Page;
                 $scope.pagesCount = result.data.TotalPages;
                 $scope.totalCount = result.data.TotalCount;
@@ -118,7 +118,7 @@
             })
         }
 
-        $scope.getDonations()
+        $scope.getlaudatories()
     }
 
-})(angular.module('doan.donations'))
+})(angular.module('doan.laudatories'))

@@ -191,6 +191,7 @@
     <Compile Include="Api\ControlPanelController.cs" />
     <Compile Include="Api\DonationController.cs" />
     <Compile Include="Api\HomeController.cs" />
+    <Compile Include="Api\LaudatoryController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -229,6 +230,13 @@
     <Content Include="app\components\home\homeController.js" />
     <Content Include="app\components\home\homeView.html" />
     <Content Include="app\components\home\rootController.js" />
+    <Content Include="app\components\Laudatories\laudatories.module.js" />
+    <Content Include="app\components\Laudatories\laudatoryAddController.js" />
+    <Content Include="app\components\Laudatories\laudatoryAddView.html" />
+    <Content Include="app\components\Laudatories\laudatoryEditController.js" />
+    <Content Include="app\components\Laudatories\laudatoryEditView.html" />
+    <Content Include="app\components\Laudatories\laudatoryListView.html" />
+    <Content Include="app\components\Laudatories\laudatoryListController.js" />
     <Content Include="app\components\login\loginController.js" />
     <Content Include="app\components\login\loginView.html" />
     <Content Include="app\shared\directives\pagerDirective.html" />

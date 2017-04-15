@@ -14,15 +14,15 @@ using System.Web.Script.Serialization;
 
 namespace DoAn.Web.Api
 {
-    [RoutePrefix("api/donation")]
+    [RoutePrefix("api/laudatory")]
     [Authorize]
-    public class DonationController : ApiControllerBase
+    public class LaudatoryController : ApiControllerBase
     {
-        private IDonationService _donationService;
+        private ILaudatoryService _laudatoryService;
 
-        public DonationController(IErrorService errorService, IDonationService donationService) : base(errorService)
+        public LaudatoryController(IErrorService errorService, ILaudatoryService laudatoryService) : base(errorService)
         {
-            this._donationService = donationService;
+            this._laudatoryService = laudatoryService;
         }
 
         [Route("getall")]
@@ -33,15 +33,15 @@ namespace DoAn.Web.Api
             {
                 int totalRow = 0;
 
-                var model = _donationService.GetAll(keyword);
+                var model = _laudatoryService.GetAll(keyword);
 
                 totalRow = model.Count();
 
                 var query = model.OrderByDescending(x => x.CreatedDate).Skip(page * pageSize).Take(pageSize);
 
-                var responseData = Mapper.Map<List<DonationViewModel>>(query.ToList());
+                var responseData = Mapper.Map<List<LaudatoryViewModel>>(query.ToList());
 
-                var paginationSet = new PaginationSet<DonationViewModel>()
+                var paginationSet = new PaginationSet<LaudatoryViewModel>()
                 {
                     Items = responseData,
                     Page = page,
@@ -61,8 +61,8 @@ namespace DoAn.Web.Api
         {
             return CreateHttpResponse(request, () =>
             {
-                var model = _donationService.GetById(id);
-                var responseData = Mapper.Map<Donation, DonationViewModel>(model);
+                var model = _laudatoryService.GetById(id);
+                var responseData = Mapper.Map<Laudatory, LaudatoryViewModel>(model);
                 var response = request.CreateResponse(HttpStatusCode.OK, responseData);
                 return response;
             });
@@ -70,7 +70,7 @@ namespace DoAn.Web.Api
 
         [Route("create")]
         [HttpPost]
-        public HttpResponseMessage Create(HttpRequestMessage request, DonationViewModel controPanelVM)
+        public HttpResponseMessage Create(HttpRequestMessage request, LaudatoryViewModel controPanelVM)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -82,12 +82,12 @@ namespace DoAn.Web.Api
                 }
                 else
                 {
-                    Donation newDonation = new Donation();
-                    newDonation.UpdateDonation(controPanelVM);
-                    newDonation.CreatedDate = DateTime.Now;
-                    newDonation.CreatedBy = User.Identity.Name;
-                    var page = _donationService.Add(newDonation);
-                    _donationService.Save();
+                    Laudatory newLaudatory = new Laudatory();
+                    newLaudatory.UpdateLaudatory(controPanelVM);
+                    newLaudatory.CreatedDate = DateTime.Now;
+                    newLaudatory.CreatedBy = User.Identity.Name;
+                    var page = _laudatoryService.Add(newLaudatory);
+                    _laudatoryService.Save();
                     response = request.CreateResponse(HttpStatusCode.Created, page);
                 }
                 return response;
@@ -96,7 +96,7 @@ namespace DoAn.Web.Api
 
         [Route("update")]
         [HttpPut]
-        public HttpResponseMessage Put(HttpRequestMessage request, DonationViewModel controPanelVM)
+        public HttpResponseMessage Put(HttpRequestMessage request, LaudatoryViewModel controPanelVM)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -108,14 +108,14 @@ namespace DoAn.Web.Api
                 }
                 else
                 {
-                    var DonationDb = _donationService.GetById(controPanelVM.ID);
-                    DonationDb.UpdateDonation(controPanelVM);
-                    DonationDb.UpdateDate = DateTime.Now;
-                    DonationDb.UpdateBy = User.Identity.Name;
-                    _donationService.Update(DonationDb);
-                    _donationService.Save();
+                    var LaudatoryDb = _laudatoryService.GetById(controPanelVM.ID);
+                    LaudatoryDb.UpdateLaudatory(controPanelVM);
+                    LaudatoryDb.UpdateDate = DateTime.Now;
+                    LaudatoryDb.UpdateBy = User.Identity.Name;
+                    _laudatoryService.Update(LaudatoryDb);
+                    _laudatoryService.Save();
 
-                    var responseData = Mapper.Map<Donation, DonationViewModel>(DonationDb);
+                    var responseData = Mapper.Map<Laudatory, LaudatoryViewModel>(LaudatoryDb);
                     response = request.CreateResponse(HttpStatusCode.Created, responseData);
                 }
                 return response;
@@ -136,9 +136,9 @@ namespace DoAn.Web.Api
                 }
                 else
                 {
-                    var oldDonation = _donationService.Delete(id);
-                    _donationService.Save();
-                    var responseData = Mapper.Map<Donation, DonationViewModel>(oldDonation);
+                    var oldLaudatory = _laudatoryService.Delete(id);
+                    _laudatoryService.Save();
+                    var responseData = Mapper.Map<Laudatory, LaudatoryViewModel>(oldLaudatory);
 
                     response = request.CreateResponse(HttpStatusCode.OK, responseData);
                 }
@@ -163,9 +163,9 @@ namespace DoAn.Web.Api
                     var ids = new JavaScriptSerializer().Deserialize<List<int>>(listId);
                     foreach (var id in ids)
                     {
-                        _donationService.Delete(id);
+                        _laudatoryService.Delete(id);
                     }
-                    _donationService.Save();
+                    _laudatoryService.Save();
                     response = request.CreateResponse(HttpStatusCode.OK, ids.Count);
                 }
                 return response;
