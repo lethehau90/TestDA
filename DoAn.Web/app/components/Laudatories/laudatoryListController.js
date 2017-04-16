@@ -10,7 +10,7 @@
 
         $scope.laudatories = [];
 
-        $scope.getlaudatories = getlaudatories;
+        $scope.getLaudatories = getLaudatories;
 
         $scope.page = 0;
         $scope.pageCount = 0;
@@ -94,10 +94,10 @@
 
         //search
         function search() {
-            getlaudatories();
+            getLaudatories();
         }
 
-        function getlaudatories(page) {
+        function getLaudatories(page) {
             var config = {
                 params: {
                     keyword: $scope.keyword,
@@ -118,7 +118,7 @@
             })
         }
 
-        $scope.getlaudatories()
+        $scope.getLaudatories()
     }
 
 })(angular.module('doan.laudatories'))

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAn.Model.Abstract;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 namespace DoAn.Model.Models
 {
     [Table("CustomImages")]
-    public class CustomImage
+    public class CustomImage : Auditable
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -18,6 +19,5 @@ namespace DoAn.Model.Models
         [MaxLength(50)]
         public string Type { set; get; }
         public string Images { set; get; }
-        public bool Status { set; get; }
     }
 }

@@ -13,6 +13,20 @@ namespace DoAn.Web.Infrastructure.Extensions
             controlPanel.Status = controlPanelViewModel.Status;
         }
 
+        //UpdateCustomImage
+        public static void UpdateCustomImage(this CustomImage customImage, CustomImageViewModel customImageViewModel)
+        {
+            customImage.ID = customImageViewModel.ID;
+            customImage.Type = customImageViewModel.Type;
+            customImage.Images = customImageViewModel.Images;
+
+            customImage.CreatedDate = customImageViewModel.CreatedDate;
+            customImage.UpdateDate = customImageViewModel.UpdateDate;
+            customImage.CreatedBy = customImageViewModel.CreatedBy;
+            customImage.UpdateBy = customImageViewModel.UpdateBy;
+            customImage.Status = customImageViewModel.Status;
+        }
+
         //UpdateDonation
         public static void UpdateDonation(this Donation donation, DonationViewModel donationViewModel)
         {

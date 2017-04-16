@@ -4,6 +4,7 @@
     angular.module('doan', ['doan.controlPanels',
                             'doan.donations',
                             'doan.laudatories',
+                            'doan.customImages',
                             'doan.common'])
         .config(config)
         .config(configAuthentication);

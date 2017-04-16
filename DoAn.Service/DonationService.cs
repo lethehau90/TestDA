@@ -18,7 +18,6 @@ namespace DoAn.Service
 
         Donation GetById(int id);
         IEnumerable<Donation> GetAll(string keyword);
-
         void Save();
     }
     public class DonationService : IDonationService

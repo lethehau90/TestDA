@@ -8,13 +8,13 @@ using DoAn.Model.Models;
 
 namespace DoAn.Data.Repositories
 {
-    public interface ICumtomImageRepository :  IRepository<CustomImage>
+    public interface ICustomImageRepository :  IRepository<CustomImage>
     {
 
     }
-    public class CumtomImageRepository : RepositoryBase<CustomImage>, ICumtomImageRepository
+    public class CustomImageRepository : RepositoryBase<CustomImage>, ICustomImageRepository
     {
-        public CumtomImageRepository(IDbFactory dbFactory) : base(dbFactory)
+        public CustomImageRepository(IDbFactory dbFactory) : base(dbFactory)
         {
 
         }

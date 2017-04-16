@@ -21,6 +21,7 @@
         {
             //CreateUser(context);
             CreateControlPanel(context);
+            CreateCustomImage(context);
 
         }
 
@@ -64,7 +65,20 @@
                 context.Controlpanels.AddRange(listControlPanel);
                 context.SaveChanges();
             }
-           
+        }
+
+        private void CreateCustomImage(DoAnDbContext context)
+        {
+            if (context.CustomImages.Count() == 0)
+            {
+                List<CustomImage> listCustomImage = new List<CustomImage>
+                {
+                    new CustomImage() {  Type = "Logo", Status = true  , CreatedDate = DateTime.Now},
+                    new CustomImage() {  Type = "Background", Status = true  , CreatedDate = DateTime.Now}
+                };
+                context.CustomImages.AddRange(listCustomImage);
+                context.SaveChanges();
+            }
         }
     }
 }
