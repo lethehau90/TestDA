@@ -36,7 +36,7 @@
                             <td><input type="checkbox" ng-model="item.checked" name="all" /></td>
                             <td>{{item.ID}}</td>
                             <td>{{item.Type}}</td>
-                            <td>{{item.Color}}</td>
+                            <td><span style="color:{{item.Color}}">{{item.Color}}</span></td>
                             <td>
                                 <span ng-class="{'badge bg-red': item.Status==false, 'badge bg-green': item.Status == true}">
                                     {{item.Status | statusFilter}}

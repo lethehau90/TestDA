@@ -13,7 +13,7 @@
 
         function EditCustomHeader() {
             apiService.put('/api/customheader/update', $scope.customHeader, function (result) {
-                notificationService.displaySuccess('Cập nhật thành công ' + result.data.Name)
+                notificationService.displaySuccess('Cập nhật thành công ' + result.data.Type)
                 $state.go('customheader')
             }, function (error) {
                 console.log('lỗi')
