@@ -8,7 +8,7 @@ MVC5 codefirt indentity + angular write the admin
 Area Client: use the ajax load page croll
 
 # Instruction
-Vs20015 + sql2012
+Need  to be used Vs20015 + sql2012
 
 open package manger consolog 
 
