@@ -44,12 +44,12 @@ namespace DoAn.Service
 
         public CustomImage getLogo(string type)
         {
-            return _customImageRepository.GetSingleByCondition(x=>x.Type == type);
+            return _customImageRepository.GetSingleByCondition(x=>x.Type == type && x.Status);
         }
 
         public CustomHeader getHeader(string type)
         {
-            return _customHeaderRepository.GetSingleByCondition(x => x.Type == type);
+            return _customHeaderRepository.GetSingleByCondition(x => x.Type == type && x.Status);
         }
 
         public IEnumerable<Laudatory> getListLaudatory()
