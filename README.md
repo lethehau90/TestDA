@@ -1,8 +1,8 @@
 # TestDA
-MVC5 code firt indentity + angular viết cho quản trị
+MVC5 codefirt indentity + angular write the admin
 
-** liên kết trang quản trị : /admin
-*** Tài khoản: admin
-*** Mật khẩu: 123456$
+** link manager : /admin
+*** username: admin
+*** password: 123456$
 
-Client; sử dụng ajax load cuộn trang
+Area Client: use the ajax load page croll
