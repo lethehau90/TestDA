@@ -38,3 +38,7 @@
    background-image: url("/Assets/client/images/background.jpg");
    height: 400px
 }
+
+.bs-example{
+    padding: 50px
+}

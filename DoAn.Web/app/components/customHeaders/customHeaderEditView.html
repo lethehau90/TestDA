@@ -29,25 +29,27 @@
                         <span ng-show="frmEditcustomHeader.type.$error.maxlength" class="has-error">Tên header chỉ được 250 ký tự</span>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">Màu</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control simple_color"  ng-maxlength="50" required name="color" ng-model="customHeader.Color">
-                        <span ng-show="frmEditcustomHeader.color.$invalid" class="has-error">Phải nhập tên màu</span>
-                        <span ng-show="frmEditcustomHeader.color.$error.maxlength" class="has-error">Tên màu chỉ được 50 ký tự</span>
-                    </div>
-                </div>
-                <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Mã Màu</label>
-                <div class="col-sm-10">
-                    <span style="color: {{customHeader.Color}}">{{customHeader.Color}}</span>
-                </div>
-            </div>
+                
+                
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Nội dung</label>
                     <div class="col-sm-10">
                         <textarea type="text" class="form-control" required name="content" ckeditor="ckeditorOptions" ng-model="customHeader.Content"></textarea>
                         <span ng-show="frmEditcustomHeader.content.$invalid" class="has-error">Phải nhập nội dung</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Nền màu</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control simple_color" ng-maxlength="50" required name="color" ng-model="customHeader.Color">
+                        <span ng-show="frmEditcustomHeader.color.$invalid" class="has-error">Phải nhập tên màu</span>
+                        <span ng-show="frmEditcustomHeader.color.$error.maxlength" class="has-error">Tên màu chỉ được 50 ký tự</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Mã Màu</label>
+                    <div class="col-sm-10">
+                        <span style="color: {{customHeader.Color}}">{{customHeader.Color}}</span>
                     </div>
                 </div>
                 <div class="form-group">
