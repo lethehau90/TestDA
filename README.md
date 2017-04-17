@@ -1,3 +1,4 @@
+Manager list donations and ladatories
 # ajax load page Scroll
 MVC5 codefirt indentity + angular write the admin
 
