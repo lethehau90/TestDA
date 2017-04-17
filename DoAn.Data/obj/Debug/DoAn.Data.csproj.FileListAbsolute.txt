@@ -16,9 +16,9 @@ E:\WEB MVC\DoAn\DoAn.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xm
 E:\WEB MVC\DoAn\DoAn.Data\obj\Debug\DoAn.Data.csprojResolveAssemblyReference.cache
 E:\WEB MVC\DoAn\DoAn.Data\obj\Debug\DoAn.Data.Migrations.adddatabase.resources
 E:\WEB MVC\DoAn\DoAn.Data\obj\Debug\DoAn.Data.Migrations.addIndentityApplicationUser.resources
-E:\WEB MVC\DoAn\DoAn.Data\obj\Debug\DoAn.Data.csproj.GenerateResource.Cache
-E:\WEB MVC\DoAn\DoAn.Data\obj\Debug\DoAn.Data.dll
-E:\WEB MVC\DoAn\DoAn.Data\obj\Debug\DoAn.Data.pdb
 E:\WEB MVC\DoAn\DoAn.Data\obj\Debug\DoAn.Data.Migrations.updatedatabase.resources
 E:\WEB MVC\DoAn\DoAn.Data\obj\Debug\DoAn.Data.Migrations.changeCustomImageinAuditable.resources
 E:\WEB MVC\DoAn\DoAn.Data\obj\Debug\DoAn.Data.Migrations.PaddingAndHeightCustomHeader.resources
+E:\WEB MVC\DoAn\DoAn.Data\obj\Debug\DoAn.Data.csproj.GenerateResource.Cache
+E:\WEB MVC\DoAn\DoAn.Data\obj\Debug\DoAn.Data.dll
+E:\WEB MVC\DoAn\DoAn.Data\obj\Debug\DoAn.Data.pdb

@@ -63,7 +63,7 @@ namespace DoAn.Service
 
         public ControlPanel getControPanel(int id)
         {
-            return _controlPanelRepository.GetSingleById(id);
+            return _controlPanelRepository.GetSingleByCondition(x=>x.ID == id && x.Status);
         }
     }
 }

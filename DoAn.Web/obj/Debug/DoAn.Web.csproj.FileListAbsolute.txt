@@ -18,6 +18,7 @@ E:\WEB MVC\DoAn\DoAn.Web\bin\Autofac.dll
 E:\WEB MVC\DoAn\DoAn.Web\bin\Autofac.Integration.Mvc.dll
 E:\WEB MVC\DoAn\DoAn.Web\bin\Autofac.Integration.WebApi.dll
 E:\WEB MVC\DoAn\DoAn.Web\bin\AutoMapper.dll
+E:\WEB MVC\DoAn\DoAn.Web\bin\CKFinder.dll
 E:\WEB MVC\DoAn\DoAn.Web\bin\DoAn.Common.dll
 E:\WEB MVC\DoAn\DoAn.Web\bin\DoAn.Data.dll
 E:\WEB MVC\DoAn\DoAn.Web\bin\DoAn.Model.dll
@@ -59,6 +60,7 @@ E:\WEB MVC\DoAn\DoAn.Web\bin\Autofac.xml
 E:\WEB MVC\DoAn\DoAn.Web\bin\Autofac.Integration.Mvc.xml
 E:\WEB MVC\DoAn\DoAn.Web\bin\Autofac.Integration.WebApi.xml
 E:\WEB MVC\DoAn\DoAn.Web\bin\AutoMapper.xml
+E:\WEB MVC\DoAn\DoAn.Web\bin\CKFinder.pdb
 E:\WEB MVC\DoAn\DoAn.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 E:\WEB MVC\DoAn\DoAn.Web\bin\System.Web.Helpers.xml
 E:\WEB MVC\DoAn\DoAn.Web\bin\System.Web.Mvc.xml
@@ -89,5 +91,3 @@ E:\WEB MVC\DoAn\DoAn.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 E:\WEB MVC\DoAn\DoAn.Web\obj\Debug\DoAn.Web.csprojResolveAssemblyReference.cache
 E:\WEB MVC\DoAn\DoAn.Web\obj\Debug\DoAn.Web.dll
 E:\WEB MVC\DoAn\DoAn.Web\obj\Debug\DoAn.Web.pdb
-E:\WEB MVC\DoAn\DoAn.Web\bin\CKFinder.dll
-E:\WEB MVC\DoAn\DoAn.Web\bin\CKFinder.pdb
