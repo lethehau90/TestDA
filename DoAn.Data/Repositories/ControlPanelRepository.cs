@@ -8,11 +8,11 @@ using DoAn.Model.Models;
 
 namespace DoAn.Data.Repositories
 {
-    public interface IControPanelRepository : IRepository<ControlPanel>
+    public interface IControlPanelRepository : IRepository<ControlPanel>
     {
 
     }
-    public class ControlPanelRepository : RepositoryBase<ControlPanel>, IControPanelRepository
+    public class ControlPanelRepository : RepositoryBase<ControlPanel>, IControlPanelRepository
     {
         public ControlPanelRepository(IDbFactory dbFactory) : base(dbFactory)
         {

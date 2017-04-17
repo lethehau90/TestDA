@@ -22,32 +22,32 @@ namespace DoAn.Service
     }
     public class ControlPanelService : IControlPanelService
     {
-        private IControPanelRepository _controPanelRepository;
+        private IControlPanelRepository _controlPanelRepository;
         private IUnitOfWork _unitOfWork;
 
-        public ControlPanelService(IControPanelRepository controPanelRepository, IUnitOfWork unitOfWork)
+        public ControlPanelService(IControlPanelRepository _controlPanelRepository, IUnitOfWork unitOfWork)
         {
-            this._controPanelRepository = controPanelRepository;
+            this._controlPanelRepository = _controlPanelRepository;
             this._unitOfWork = unitOfWork;
         }
         public ControlPanel Add(ControlPanel controPanel)
         {
-            return _controPanelRepository.Add(controPanel);
+            return _controlPanelRepository.Add(controPanel);
         }
 
         public ControlPanel Delete(int id)
         {
-            return _controPanelRepository.Delete(id);
+            return _controlPanelRepository.Delete(id);
         }
 
         public IEnumerable<ControlPanel> GetAll()
         {
-            return _controPanelRepository.GetAll();
+            return _controlPanelRepository.GetAll();
         }
 
         public ControlPanel GetById(int id)
         {
-            return _controPanelRepository.GetSingleById(id);
+            return _controlPanelRepository.GetSingleById(id);
         }
 
         public void Save()
@@ -57,7 +57,7 @@ namespace DoAn.Service
 
         public void Update(ControlPanel contropanel)
         {
-            _controPanelRepository.Update(contropanel);
+            _controlPanelRepository.Update(contropanel);
         }
     }
 }
