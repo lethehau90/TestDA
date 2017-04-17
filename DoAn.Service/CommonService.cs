@@ -13,8 +13,8 @@ namespace DoAn.Service
     {
         CustomImage getLogo(string type);
         CustomHeader getHeader(string type);
-        IEnumerable<Laudatory> getListLaudatory();
-        IEnumerable<Donation> getListDonation();
+        IEnumerable<Laudatory> getListLaudatory(int pageIndex, int pageSize);
+        IEnumerable<Donation> getListDonation(int pageIndex, int pageSize);
         ControlPanel getControPanel(int id);
     }
     public class CommonService : ICommonService
@@ -51,14 +51,14 @@ namespace DoAn.Service
             return _customHeaderRepository.GetSingleByCondition(x => x.Type == type && x.Status);
         }
 
-        public IEnumerable<Laudatory> getListLaudatory()
+        public IEnumerable<Laudatory> getListLaudatory(int pageIndex, int pageSize)
         {
-            return _laudatoryRepository.GetMulti(x=>x.Status);
+            return _laudatoryRepository.GetMulti(x=>x.Status).Skip(pageIndex*pageSize).Take(pageSize);
         }
 
-        public IEnumerable<Donation> getListDonation()
+        public IEnumerable<Donation> getListDonation(int pageIndex, int pageSize)
         {
-            return _donationRepository.GetMulti(x => x.Status);
+            return _donationRepository.GetMulti(x => x.Status).Skip(pageIndex * pageSize).Take(pageSize);
         }
 
         public ControlPanel getControPanel(int id)

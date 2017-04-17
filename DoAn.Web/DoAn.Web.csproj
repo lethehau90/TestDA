@@ -217,6 +217,7 @@
     <Compile Include="Models\CustomHeaderViewModel.cs" />
     <Compile Include="Models\CustomImageViewModel.cs" />
     <Compile Include="Models\CustomModelTableViewModel.cs" />
+    <Compile Include="Infrastructure\Core\JsonModel.cs" />
     <Compile Include="Models\LaudatoryViewModel.cs" />
     <Compile Include="Models\DonationViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -5855,7 +5856,10 @@
     <Content Include="Assets\admin\libs\toastr\toastr.min.css" />
     <Content Include="Assets\admin\libs\toastr\toastr.min.js" />
     <Content Include="Assets\client\css\style.css" />
+    <Content Include="Assets\client\images\ajax-loader.gif" />
     <Content Include="Assets\client\images\background.jpg" />
+    <Content Include="Assets\client\js\jquery.twbsPagination.min.js" />
+    <Content Include="Assets\client\js\mustache.min.js" />
     <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -6157,6 +6161,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Background.cshtml" />
+    <Content Include="Views\Home\_laudatoryList.cshtml" />
+    <Content Include="Views\Home\_donationList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DoAn.Common\DoAn.Common.csproj">

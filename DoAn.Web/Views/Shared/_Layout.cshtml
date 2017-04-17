@@ -5,6 +5,8 @@
     <meta charset="utf-8" />
     <link href="~/Assets/admin/libs/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <link href="~/Assets/client/css/style.css" rel="stylesheet" />
+    <script src="~/Assets/admin/libs/jquery/dist/jquery.js"></script>
+
 </head>
 <body>
     <div class="container">
@@ -22,7 +24,55 @@
             </div>
         </div>
     </div>
+    <script src="~/Assets/client/js/mustache.min.js"></script>
+    <script src="~/Assets/client/js/jquery.twbsPagination.min.js"></script>
+    <script>
+        function formatMoneyVND(money) {
+            if (money == 0) {
+                return 0;
+            }
+            var tmp = money.toString().split('').reverse().join('');
+            var a = [];
+            var len = tmp.length;
+            var b = true;
+            while (b) {
+                if (tmp.indexOf(",") > 0) {
+                    tmp = tmp.replace(",", "");
+                    b = true;
+                }
+                else {
+                    b = false;
+                }
+            }
+            b = true;
+            while (b) {
+                len = tmp.length;
+                if (len % 3 != 0) {
+                    tmp = tmp.toString() + '0';
+                    b = true;
+                }
+                else {
+                    b = false;
+                }
+            }
+            for (var i = 0; i < tmp.length; i += 3) {
+                a.push(tmp[i] + tmp[i + 1] + tmp[i + 2]);
+            }
+            tmp = a.toString().split('').reverse().join('');
+            b = true;
+            while (b) {
+                if (tmp[0] == 0 || tmp[0] == ',') {
+                    tmp = tmp.substr(1);
+                    b = true;
+                }
+                else {
+                    b = false;
+                }
+            }
+            return tmp;
+        }
+    </script>
+    @RenderSection("scripts", required: false)
 </body>
-<script src="~/Assets/admin/libs/jquery/dist/jquery.js"></script>
 
 </html>
