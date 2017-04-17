@@ -30,7 +30,9 @@ namespace DoAn.Web.Controllers
 
         public ActionResult Header()
         {
-            return PartialView();
+            var customHeaderModel = _commonService.getHeader("Header");
+            var customHeaderViewModel = Mapper.Map<CustomHeader, CustomHeaderViewModel>(customHeaderModel);
+            return PartialView(customHeaderViewModel);
         }
 
     }

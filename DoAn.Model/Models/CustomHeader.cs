@@ -21,5 +21,7 @@ namespace DoAn.Model.Models
         [MaxLength(50)]
         public string Color { set; get; }
         public string Content { set; get; }
+        public int PaddingTop { set; get; }
+        public int Height { set; get; }
     }
 }

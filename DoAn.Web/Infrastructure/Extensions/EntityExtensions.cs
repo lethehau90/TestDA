@@ -34,6 +34,8 @@ namespace DoAn.Web.Infrastructure.Extensions
             customHeader.Type = customHeaderViewModel.Type;
             customHeader.Color = customHeaderViewModel.Color;
             customHeader.Content = customHeaderViewModel.Content;
+            customHeader.PaddingTop = customHeaderViewModel.PaddingTop;
+            customHeader.Height = customHeaderViewModel.Height;
 
             customHeader.CreatedDate = customHeaderViewModel.CreatedDate;
             customHeader.UpdateDate = customHeaderViewModel.UpdateDate;

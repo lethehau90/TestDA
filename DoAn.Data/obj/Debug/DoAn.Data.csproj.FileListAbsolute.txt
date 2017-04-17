@@ -21,3 +21,4 @@ E:\WEB MVC\DoAn\DoAn.Data\obj\Debug\DoAn.Data.dll
 E:\WEB MVC\DoAn\DoAn.Data\obj\Debug\DoAn.Data.pdb
 E:\WEB MVC\DoAn\DoAn.Data\obj\Debug\DoAn.Data.Migrations.updatedatabase.resources
 E:\WEB MVC\DoAn\DoAn.Data\obj\Debug\DoAn.Data.Migrations.changeCustomImageinAuditable.resources
+E:\WEB MVC\DoAn\DoAn.Data\obj\Debug\DoAn.Data.Migrations.PaddingAndHeightCustomHeader.resources

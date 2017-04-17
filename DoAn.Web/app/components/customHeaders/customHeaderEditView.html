@@ -29,8 +29,6 @@
                         <span ng-show="frmEditcustomHeader.type.$error.maxlength" class="has-error">Tên header chỉ được 250 ký tự</span>
                     </div>
                 </div>
-                
-                
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Nội dung</label>
                     <div class="col-sm-10">
@@ -50,6 +48,20 @@
                     <label for="inputEmail3" class="col-sm-2 control-label">Mã Màu</label>
                     <div class="col-sm-10">
                         <span style="color: {{customHeader.Color}}">{{customHeader.Color}}</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Khoảng cách trên</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" required name="paddingtop" ng-model="customHeader.PaddingTop">
+                        <span ng-show="frmEditcustomHeader.paddingtop.$invalid" class="has-error">Phải nhập Khoảng cách trên</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Độ cao</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" required name="height" ng-model="customHeader.Height">
+                        <span ng-show="frmEditcustomHeader.height.$invalid" class="has-error">Phải nhập tên độ cao</span>
                     </div>
                 </div>
                 <div class="form-group">
