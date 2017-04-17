@@ -14,13 +14,13 @@ using System.Web.Script.Serialization;
 
 namespace DoAn.Web.Api
 {
-    [RoutePrefix("api/customimage")]
+    [RoutePrefix("api/customheader")]
     [Authorize]
-    public class CustomImageController : ApiControllerBase
+    public class CustomHeaderController : ApiControllerBase
     {
-        private ICustomImageService _customImageService;
+        private ICustomHeaderService _customImageService;
 
-        public CustomImageController(IErrorService errorService, ICustomImageService customImageService) : base(errorService)
+        public CustomHeaderController(IErrorService errorService, ICustomHeaderService customImageService) : base(errorService)
         {
             this._customImageService = customImageService;
         }
@@ -45,7 +45,7 @@ namespace DoAn.Web.Api
             return CreateHttpResponse(request, () =>
             {
                 var model = _customImageService.GetById(id);
-                var responseData = Mapper.Map<CustomImage, CustomImageViewModel>(model);
+                var responseData = Mapper.Map<CustomHeader, CustomHeaderViewModel>(model);
                 var response = request.CreateResponse(HttpStatusCode.OK, responseData);
                 return response;
             });
@@ -53,7 +53,7 @@ namespace DoAn.Web.Api
 
         [Route("create")]
         [HttpPost]
-        public HttpResponseMessage Create(HttpRequestMessage request, CustomImageViewModel customImageVM)
+        public HttpResponseMessage Create(HttpRequestMessage request, CustomHeaderViewModel customHeaderVM)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -65,11 +65,11 @@ namespace DoAn.Web.Api
                 }
                 else
                 {
-                    CustomImage newCustomImage = new CustomImage();
-                    newCustomImage.UpdateCustomImage(customImageVM);
-                    newCustomImage.CreatedDate = DateTime.Now;
-                    newCustomImage.CreatedBy = User.Identity.Name;
-                    var page = _customImageService.Add(newCustomImage);
+                    CustomHeader newCustomHeader = new CustomHeader();
+                    newCustomHeader.UpdateCustomHeader(customHeaderVM);
+                    newCustomHeader.CreatedDate = DateTime.Now;
+                    newCustomHeader.CreatedBy = User.Identity.Name;
+                    var page = _customImageService.Add(newCustomHeader);
                     _customImageService.Save();
                     response = request.CreateResponse(HttpStatusCode.Created, page);
                 }
@@ -79,7 +79,7 @@ namespace DoAn.Web.Api
 
         [Route("update")]
         [HttpPut]
-        public HttpResponseMessage Put(HttpRequestMessage request, CustomImageViewModel customImageVM)
+        public HttpResponseMessage Put(HttpRequestMessage request, CustomHeaderViewModel customHeaderVM)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -91,14 +91,14 @@ namespace DoAn.Web.Api
                 }
                 else
                 {
-                    var CustomImageDb = _customImageService.GetById(customImageVM.ID);
-                    CustomImageDb.UpdateCustomImage(customImageVM);
-                    CustomImageDb.UpdateDate = DateTime.Now;
-                    CustomImageDb.UpdateBy = User.Identity.Name;
-                    _customImageService.Update(CustomImageDb);
+                    var CustomHeaderDb = _customImageService.GetById(customHeaderVM.ID);
+                    CustomHeaderDb.UpdateCustomHeader(customHeaderVM);
+                    CustomHeaderDb.UpdateDate = DateTime.Now;
+                    CustomHeaderDb.UpdateBy = User.Identity.Name;
+                    _customImageService.Update(CustomHeaderDb);
                     _customImageService.Save();
 
-                    var responseData = Mapper.Map<CustomImage, CustomImageViewModel>(CustomImageDb);
+                    var responseData = Mapper.Map<CustomHeader, CustomHeaderViewModel>(CustomHeaderDb);
                     response = request.CreateResponse(HttpStatusCode.Created, responseData);
                 }
                 return response;
@@ -119,9 +119,9 @@ namespace DoAn.Web.Api
                 }
                 else
                 {
-                    var oldCustomImage = _customImageService.Delete(id);
+                    var oldCustomHeader = _customImageService.Delete(id);
                     _customImageService.Save();
-                    var responseData = Mapper.Map<CustomImage, CustomImageViewModel>(oldCustomImage);
+                    var responseData = Mapper.Map<CustomHeader, CustomHeaderViewModel>(oldCustomHeader);
 
                     response = request.CreateResponse(HttpStatusCode.OK, responseData);
                 }

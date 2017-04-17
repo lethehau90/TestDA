@@ -193,6 +193,7 @@
   <ItemGroup>
     <Compile Include="Api\AccountController.cs" />
     <Compile Include="Api\ControlPanelController.cs" />
+    <Compile Include="Api\CustomHeaderController.cs" />
     <Compile Include="Api\CustomImageController.cs" />
     <Compile Include="Api\DonationController.cs" />
     <Compile Include="Api\HomeController.cs" />
