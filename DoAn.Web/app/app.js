@@ -5,6 +5,7 @@
                             'doan.donations',
                             'doan.laudatories',
                             'doan.customImages',
+                            'doan.customHeaders',
                             'doan.common'])
         .config(config)
         .config(configAuthentication);
