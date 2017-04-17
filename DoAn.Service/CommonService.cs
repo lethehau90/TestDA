@@ -24,8 +24,7 @@ namespace DoAn.Service
         private IDonationRepository _donationRepository;
         private IControlPanelRepository _controlPanelRepository;
         private ILaudatoryRepository _laudatoryRepository;
-        private IUnitOfWork _unitOfWork;
-        
+        private IUnitOfWork _unitOfWork;       
 
         public CommonService(ICustomHeaderRepository customHeaderRepository,
                              ICustomImageRepository customImageRepository,
