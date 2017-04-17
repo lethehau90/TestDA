@@ -28,7 +28,13 @@
             })
         }
 
-        getDetailCustomHeader()
+        //ckeditor
+        $scope.ckeditorOptions = {
+            languague: 'vi',
+            height: '200px'
+        }
+
+        $scope.getDetailCustomHeader()
 
     }
 
