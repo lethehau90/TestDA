@@ -229,6 +229,10 @@
     <Content Include="app\components\controlPanels\controlPanelEditView.html" />
     <Content Include="app\components\controlPanels\controlPanelListController.js" />
     <Content Include="app\components\controlPanels\controlPanelListView.html" />
+    <Content Include="app\components\customHeaders\customHeaderEditController.js" />
+    <Content Include="app\components\customHeaders\customHeaderEditView.html" />
+    <Content Include="app\components\customHeaders\customHeaderListController.js" />
+    <Content Include="app\components\customHeaders\customHeaderListView.html" />
     <Content Include="app\components\customImages\customImageAddController.js" />
     <Content Include="app\components\customImages\customImageAddView.html" />
     <Content Include="app\components\customImages\customImageEditController.js" />
@@ -3062,6 +3066,7 @@
     <Content Include="Assets\admin\libs\ngBootbox\typings\angularjs\angular.d.ts" />
     <Content Include="Assets\admin\libs\ngBootbox\typings\jquery\jquery.d.ts" />
     <Content Include="Assets\admin\libs\ngBootbox\typings\tsd.d.ts" />
+    <Content Include="Assets\admin\libs\simple-color\jquery.simple-color.js" />
     <Content Include="Assets\admin\libs\slimScroll\examples\allow-page-scroll.html" />
     <Content Include="Assets\admin\libs\slimScroll\examples\chaining.html" />
     <Content Include="Assets\admin\libs\slimScroll\examples\disable-fade-out.html" />
@@ -3086,6 +3091,8 @@
     <Content Include="Assets\admin\libs\toastr\toastr.js" />
     <Content Include="Assets\admin\libs\toastr\toastr.min.css" />
     <Content Include="Assets\admin\libs\toastr\toastr.min.js" />
+    <Content Include="Assets\client\css\style.css" />
+    <Content Include="Assets\client\images\background.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Libs\CKFinder.dll" />
@@ -3344,6 +3351,7 @@
     <Content Include="Assets\admin\libs\ckfinder\plugins\fileeditor\codemirror\LICENSE" />
     <Content Include="Assets\admin\libs\ckfinder\userfiles\.htaccess" />
     <Content Include="app\components\customImages\customImages.module.js" />
+    <Content Include="app\components\customHeaders\customHeaders.module.js" />
     <None Include="Project_Readme.html" />
     <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
