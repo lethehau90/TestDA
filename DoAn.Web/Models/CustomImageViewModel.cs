@@ -16,5 +16,7 @@ namespace DoAn.Web.Models
         public string CreatedBy { set; get; }
         public string UpdateBy { set; get; }
         public bool Status { set; get; }
+        public string BgColor { set; get; }
+        public int Height { set; get; }
     }
 }

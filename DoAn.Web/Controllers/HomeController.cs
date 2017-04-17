@@ -49,5 +49,12 @@ namespace DoAn.Web.Controllers
             var customHeaderViewModel = Mapper.Map<CustomHeader, CustomHeaderViewModel>(customHeaderModel);
             return PartialView(customHeaderViewModel);
         }
+
+        public ActionResult Background()
+        {
+            var customImageModel = _commonService.getLogo("Background");
+            var customHeaderViewModel = Mapper.Map<CustomImage, CustomImageViewModel>(customImageModel);
+            return PartialView(customHeaderViewModel);
+        }
     }
 }

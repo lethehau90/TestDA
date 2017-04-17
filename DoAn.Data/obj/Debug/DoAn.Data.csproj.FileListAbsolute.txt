@@ -22,3 +22,4 @@ E:\WEB MVC\DoAn\DoAn.Data\obj\Debug\DoAn.Data.Migrations.PaddingAndHeightCustomH
 E:\WEB MVC\DoAn\DoAn.Data\obj\Debug\DoAn.Data.csproj.GenerateResource.Cache
 E:\WEB MVC\DoAn\DoAn.Data\obj\Debug\DoAn.Data.dll
 E:\WEB MVC\DoAn\DoAn.Data\obj\Debug\DoAn.Data.pdb
+E:\WEB MVC\DoAn\DoAn.Data\obj\Debug\DoAn.Data.Migrations.changeCustomImage.resources

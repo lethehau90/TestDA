@@ -15,10 +15,13 @@ namespace DoAn.Model.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID { set; get; }
+        public int ID { set; get;}
         [Required]
         [MaxLength(50)]
         public string Type { set; get; }
         public string Images { set; get; }
+        [MaxLength(50)]
+        public string BgColor { set; get; }
+        public int Height { set; get; }
     }
 }

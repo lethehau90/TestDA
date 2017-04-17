@@ -19,6 +19,8 @@ namespace DoAn.Web.Infrastructure.Extensions
             customImage.ID = customImageViewModel.ID;
             customImage.Type = customImageViewModel.Type;
             customImage.Images = customImageViewModel.Images;
+            customImage.BgColor = customImageViewModel.BgColor;
+            customImage.Height = customImageViewModel.Height;
 
             customImage.CreatedDate = customImageViewModel.CreatedDate;
             customImage.UpdateDate = customImageViewModel.UpdateDate;

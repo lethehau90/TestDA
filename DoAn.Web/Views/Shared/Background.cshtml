@@ -1,0 +1,24 @@
+﻿@model DoAn.Web.Models.CustomImageViewModel
+<div class=".col-md-2 maxheight">
+    <div class="img-responsive logoheader pull-left">
+        @if (Model.Images != "" )
+        {
+            <style>
+                .contentbody {
+                    background-image: url("@(Model.Images)");
+                    height: @(Model.Height)%;
+                }
+            </style>
+        }
+        else
+        {
+            <style>
+                .contentbody {
+                    background-color: @(Model.BgColor);
+                    height: @(Model.Height)%;
+                }
+            </style>
+        }
+    </div>
+</div>
+

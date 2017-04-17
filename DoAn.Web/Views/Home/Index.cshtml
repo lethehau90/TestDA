@@ -8,7 +8,7 @@
     var controlPanel = ViewBag.ControPanel;
     var listDonations = (IEnumerable<DoAn.Web.Models.DonationViewModel>)ViewBag.donationViewModel;
  }
-
+@{ Html.RenderAction("Background", "Home");}
 @if (controlPanel != null)
 {
     <div class="bs-example">
