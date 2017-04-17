@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Trang chủ</title>
+    <meta charset="utf-8" />
+    <link href="~/Assets/admin/libs/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Assets/client/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="row">
+                <div class="col-md-12">
+                    @{ Html.RenderAction("Logo", "Home");}
+                    @{ Html.RenderAction("Header", "Home");}
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="contentbody">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+</body>
+</html>

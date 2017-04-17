@@ -12,5 +12,15 @@ namespace DoAn.Web.Controllers
         {
             return View();
         }
+        public ActionResult Logo()
+        {
+            return PartialView();
+        }
+
+        public ActionResult Header()
+        {
+            return PartialView();
+        }
+
     }
 }
