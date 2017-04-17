@@ -1,4 +1,4 @@
-# ajax load page croll
+# ajax load page Scroll
 MVC5 codefirt indentity + angular write the admin
 
 -- link manager : /admin
