@@ -27,6 +27,21 @@ namespace DoAn.Web.Infrastructure.Extensions
             customImage.Status = customImageViewModel.Status;
         }
 
+        //UpdateCustomHeader
+        public static void UpdateCustomHeader(this CustomHeader customHeader, CustomHeaderViewModel customHeaderViewModel)
+        {
+            customHeader.ID = customHeaderViewModel.ID;
+            customHeader.Type = customHeaderViewModel.Type;
+            customHeader.Color = customHeaderViewModel.Color;
+            customHeader.Content = customHeaderViewModel.Content;
+
+            customHeader.CreatedDate = customHeaderViewModel.CreatedDate;
+            customHeader.UpdateDate = customHeaderViewModel.UpdateDate;
+            customHeader.CreatedBy = customHeaderViewModel.CreatedBy;
+            customHeader.UpdateBy = customHeaderViewModel.UpdateBy;
+            customHeader.Status = customHeaderViewModel.Status;
+        }
+
         //UpdateDonation
         public static void UpdateDonation(this Donation donation, DonationViewModel donationViewModel)
         {

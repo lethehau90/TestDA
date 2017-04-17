@@ -17,6 +17,7 @@ namespace DoAn.Data
         }
         public DbSet<ControlPanel> Controlpanels { get; set; }
         public DbSet<CustomImage> CustomImages { get; set; }
+        public DbSet<CustomHeader> CustomHeaders { get; set; }
         public DbSet<Donation> Donations { get; set; }
         public DbSet<Laudatory> Laudatorys { get; set; }
         public static DoAnDbContext Create()

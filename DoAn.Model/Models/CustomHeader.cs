@@ -9,9 +9,8 @@ using System.Threading.Tasks;
 
 namespace DoAn.Model.Models
 {
-   
-    [Table("CustomImages")]
-    public class CustomImage : Auditable
+    [Table("CustomHeaders")]
+    public class CustomHeader : Auditable
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -19,6 +18,8 @@ namespace DoAn.Model.Models
         [Required]
         [MaxLength(50)]
         public string Type { set; get; }
-        public string Images { set; get; }
+        [MaxLength(50)]
+        public string Color { set; get; }
+        public string Content { set; get; }
     }
 }

@@ -22,6 +22,7 @@
             //CreateUser(context);
             CreateControlPanel(context);
             CreateCustomImage(context);
+            CreateCustomHeader(context);
 
         }
 
@@ -77,6 +78,18 @@
                     new CustomImage() {  Type = "Background", Status = true  , CreatedDate = DateTime.Now}
                 };
                 context.CustomImages.AddRange(listCustomImage);
+                context.SaveChanges();
+            }
+        }
+        private void CreateCustomHeader(DoAnDbContext context)
+        {
+            if (context.CustomHeaders.Count() == 0)
+            {
+                List<CustomHeader> listCustomHeader = new List<CustomHeader>
+                {
+                    new CustomHeader() {  Type = "Header", Status = true  , CreatedDate = DateTime.Now},
+                };
+                context.CustomHeaders.AddRange(listCustomHeader);
                 context.SaveChanges();
             }
         }

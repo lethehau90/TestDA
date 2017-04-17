@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="Abstract\Auditable.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models\CustomHeader.cs" />
     <Compile Include="Models\Donation.cs" />
     <Compile Include="Models\CustomImage.cs" />
     <Compile Include="Models\ControlPanel.cs" />

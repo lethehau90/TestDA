@@ -12,6 +12,7 @@ namespace DoAn.Web.Mappings
             Mapper.CreateMap<Donation, DonationViewModel>();
             Mapper.CreateMap<Laudatory, LaudatoryViewModel>();
             Mapper.CreateMap<CustomImage, CustomImageViewModel>();
+            Mapper.CreateMap<CustomHeader, CustomHeaderViewModel>();
         }
     }
 }

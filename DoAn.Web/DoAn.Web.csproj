@@ -213,6 +213,7 @@
     <Compile Include="Infrastructure\Extensions\EntityExtensions.cs" />
     <Compile Include="Mappings\AutoMapperConfiguraion.cs" />
     <Compile Include="Models\ControlPanelViewModel.cs" />
+    <Compile Include="Models\CustomHeaderViewModel.cs" />
     <Compile Include="Models\CustomImageViewModel.cs" />
     <Compile Include="Models\LaudatoryViewModel.cs" />
     <Compile Include="Models\DonationViewModel.cs" />
