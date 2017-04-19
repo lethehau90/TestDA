@@ -6,7 +6,7 @@ MVC5 codefirt indentity + angular write in the admin
 -- username: admin
 -- password: 123456$
 
-Area Client: Normal MVC5 the use the ajax load page croll
+Area Client: Normal MVC5 the use the ajax load page scroll
 
 # Instruction
 Need  to be used Vs20015 + sql2012
