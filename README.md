@@ -11,7 +11,6 @@ Area Client: use the ajax load page croll
 # Instruction
 Need  to be used Vs20015 + sql2012
 
-open package manger consolog 
-
+open package manager consolog in Model Data
 + step 1 : add-migration updatedatabase
 + step 2 : update-database
