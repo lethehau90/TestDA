@@ -1,35 +1,35 @@
-﻿
-<div class="bs-example">
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Họ và tên</th>
-                <th>Lớp</th>
-                <th>Số tiền (VNĐ)</th>
-                <th>Địa chỉ</th>
-                <th>Ghi chú</th>
-            </tr>
-        </thead>
-        <tbody id="tblData"></tbody> 
-    </table>
-</div>
+﻿<marquee direction="Up" scrollamount="1">
+    <div class="bs-example">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Họ và tên</th>
+                    <th>Lớp</th>
+                    <th>Số tiền (VNĐ)</th>
+                    <th>Địa chỉ</th>
+                    <th>Ghi chú</th>
+                </tr>
+            </thead>
+            <tbody id="tblData"></tbody>
+        </table>
+    </div>
+</marquee>
+    <script id="data-template" type="x-tmpl-mustache">
+        <tr>
+            <td>{{Name}}</td>
+            <td>{{Class}}</td>
+            <td>{{Price}}</td>
+            <td>{{Address}}</td>
+            <td>{{Note}}</td>
+        </tr>
 
-<script id="data-template" type="x-tmpl-mustache">
-    <tr>
-        <td>{{Name}}</td>
-        <td>{{Class}}</td>
-        <td>{{Price}}</td>
-        <td>{{Address}}</td>
-        <td>{{Note}}</td>
-    </tr>
 
+    </script>
 
-</script>          
-
-<div class="row">
-    <div class="form-group pull-right">
-        <div class="col-md-12">
-            <label>Tổng tiền quyên góp:  </label><label class="alert-danger">@string.Format("{0:0,0 VNĐ}", ViewBag.sum)</label>
+    <div class="row">
+        <div class="form-group pull-right">
+            <div class="col-md-12">
+                <label>Tổng tiền quyên góp:  </label><label class="alert-danger">@string.Format("{0:0,0 VNĐ}", ViewBag.sum)</label>
+            </div>
         </div>
     </div>
-</div>

@@ -17,3 +17,5 @@ E:\WEB MVC\DoAn\DoAn.Service\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 E:\WEB MVC\DoAn\DoAn.Service\obj\Debug\DoAn.Service.csprojResolveAssemblyReference.cache
 E:\WEB MVC\DoAn\DoAn.Service\obj\Debug\DoAn.Service.dll
 E:\WEB MVC\DoAn\DoAn.Service\obj\Debug\DoAn.Service.pdb
+E:\WEB MVC\DoAn\DoAn.Service\bin\Debug\DoAn.Data.dll.config
+E:\WEB MVC\DoAn\DoAn.Service\bin\Debug\DoAn.Model.dll.config

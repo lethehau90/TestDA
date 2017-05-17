@@ -2,6 +2,7 @@
 using DoAn.Model.Models;
 using DoAn.Service;
 using DoAn.Web.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
@@ -26,7 +27,6 @@ namespace DoAn.Web.Controllers
             var controlPanelModel = _commonService.getControPanel(2);
             var controlPanelViewModel = Mapper.Map<ControlPanel, ControlPanelViewModel>(controlPanelModel);
             var getAll = _donationService.GetAll(null);
-
             decimal? sum = 0;
             foreach (var item in getAll)
             {
@@ -40,14 +40,24 @@ namespace DoAn.Web.Controllers
         {
             var donationModel = _commonService.getListDonation(pageIndex, pageSize);
             var donationViewModel = Mapper.Map<IEnumerable<Donation>, IEnumerable<DonationViewModel>>(donationModel);
-            return Json(donationViewModel.ToList(), JsonRequestBehavior.AllowGet);
+
+            var donationGetAllModel = _commonService.getByAllDT();
+            var donantionGetAllViewModel = Mapper.Map<IEnumerable<Donation>, IEnumerable<DonationViewModel>>(donationGetAllModel);
+
+            Double count = Math.Round((Double)(donantionGetAllViewModel.Count() / 15));
+            return Json(new { data = donationViewModel.ToList() , Count = count}, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult getLaudatories(int pageIndex, int pageSize)
         {
             var laudatoryModel = _commonService.getListLaudatory(pageIndex, pageSize);
             var laudatoryViewModel = Mapper.Map<IEnumerable<Laudatory>, IEnumerable<LaudatoryViewModel>>(laudatoryModel);
-            return Json(laudatoryViewModel.ToList(), JsonRequestBehavior.AllowGet);
+
+            var laudatoryGetAllModel = _commonService.getByAllLT();
+            var laudatoryGetAllViewModel = Mapper.Map<IEnumerable<Laudatory>, IEnumerable<LaudatoryViewModel>>(laudatoryGetAllModel);
+
+            Double count = Math.Round((Double)(laudatoryGetAllViewModel.Count() / 15));
+            return Json(new { data = laudatoryViewModel.ToList(), Count = count }, JsonRequestBehavior.AllowGet);
         }
 
         /// <summary>

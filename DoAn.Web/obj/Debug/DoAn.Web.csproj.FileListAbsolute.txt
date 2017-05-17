@@ -91,3 +91,5 @@ E:\WEB MVC\DoAn\DoAn.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 E:\WEB MVC\DoAn\DoAn.Web\obj\Debug\DoAn.Web.csprojResolveAssemblyReference.cache
 E:\WEB MVC\DoAn\DoAn.Web\obj\Debug\DoAn.Web.dll
 E:\WEB MVC\DoAn\DoAn.Web\obj\Debug\DoAn.Web.pdb
+E:\WEB MVC\DoAn\DoAn.Web\bin\DoAn.Data.dll.config
+E:\WEB MVC\DoAn\DoAn.Web\bin\DoAn.Model.dll.config

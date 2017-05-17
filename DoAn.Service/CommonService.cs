@@ -15,6 +15,8 @@ namespace DoAn.Service
         CustomHeader getHeader(string type);
         IEnumerable<Laudatory> getListLaudatory(int pageIndex, int pageSize);
         IEnumerable<Donation> getListDonation(int pageIndex, int pageSize);
+        IEnumerable<Laudatory> getByAllLT();
+        IEnumerable<Donation> getByAllDT();
         ControlPanel getControPanel(int id);
     }
     public class CommonService : ICommonService
@@ -53,17 +55,27 @@ namespace DoAn.Service
 
         public IEnumerable<Laudatory> getListLaudatory(int pageIndex, int pageSize)
         {
-            return _laudatoryRepository.GetMulti(x=>x.Status).Skip(pageIndex*pageSize).Take(pageSize);
+            return _laudatoryRepository.GetMulti(x=>x.Status).OrderByDescending(x => x.CreatedDate).Skip(pageIndex*pageSize).Take(pageSize);
         }
 
         public IEnumerable<Donation> getListDonation(int pageIndex, int pageSize)
         {
-            return _donationRepository.GetMulti(x => x.Status).Skip(pageIndex * pageSize).Take(pageSize);
+            return _donationRepository.GetMulti(x => x.Status).OrderByDescending(x => x.CreatedDate).Skip(pageIndex * pageSize).Take(pageSize);
         }
 
         public ControlPanel getControPanel(int id)
         {
             return _controlPanelRepository.GetSingleByCondition(x=>x.ID == id && x.Status);
+        }
+
+        public IEnumerable<Laudatory> getByAllLT()
+        {
+            return _laudatoryRepository.GetAll();
+        }
+
+        public IEnumerable<Donation> getByAllDT()
+        {
+            return _donationRepository.GetAll();
         }
     }
 }

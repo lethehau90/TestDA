@@ -7,11 +7,14 @@
 @{ Html.RenderAction("Background", "Home");}
 @if (Model != null)
 {
+    
+
     @section scripts{
         <script type="text/javascript">
 
             var pageSize = 15;
             var pageIndex = 0;
+            var count = 0;
 
             $(document).ready(function () {
                 GetData();
@@ -22,6 +25,8 @@
                         GetData();
                     }
                 });
+
+                window.setInterval('GetData()', 10000); // 3 seconds
             });
 
             function GetData() {
@@ -30,8 +35,10 @@
                     url: '/Home/getDonation',
                     data: { "pageindex": pageIndex, "pagesize": pageSize },
                     dataType: 'json',
-                    success: function (data) {
+                    success: function (response) {
                         var html = '';
+                        var data = response.data
+                        count = response.Count
                         var template = $('#data-template').html();
                         if (data != null) {
                             var i = 0;
@@ -47,6 +54,7 @@
                             $('#tblData').append(html);
                             pageIndex++;
                         }
+                        var a = $(document).height() - $(window).height()
                     },
                     beforeSend: function () {
                         $("#progress").show();
@@ -59,6 +67,7 @@
                     }
                 });
             }
+            
         </script>
     }
 
@@ -72,6 +81,7 @@ else
 
             var pageSize = 15;
             var pageIndex = 0;
+            var count = 0;
 
             $(document).ready(function () {
                 GetData();
@@ -82,6 +92,8 @@ else
                         GetData();
                     }
                 });
+
+                window.setInterval('GetData()', 10000); // 3 seconds
             });
 
             function GetData() {
@@ -90,14 +102,14 @@ else
                     url: '/Home/getLaudatories',
                     data: { "pageindex": pageIndex, "pagesize": pageSize },
                     dataType: 'json',
-                    success: function (data) {
+                    success: function (response) {
+                        var data = response.data
+                        count = response.Count
                         var html = '';
                         var template = $('#data-template').html();
                         if (data != null) {
-                            var i = 0;
                             $.each(data, function (i, item) {
                                 html += Mustache.render(template, {
-                                    Stt: i++,
                                     Name: item.Name,
                                     Class: item.Class,
                                     Appellation: item.Appellation,
