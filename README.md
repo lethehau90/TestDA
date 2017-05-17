@@ -1,5 +1,6 @@
 # Manager list donations and laudatories
 # ajax load page Scroll
+
 MVC5 codefirt indentity + angular write in the admin
 
 -- link manager : /admin
